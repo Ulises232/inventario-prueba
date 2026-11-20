@@ -1,0 +1,44 @@
+:root { --brand: #206bc4; --soft-border: #e9edf2; }
+body { -webkit-font-smoothing: antialiased; }
+.auth-page { min-height: 100vh; }
+.auth-page .page-center { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.auth-page .container-tight { width: min(100%, 420px); }
+.brand-icon, .sidebar-logo { display: inline-flex; align-items: center; justify-content: center; background: #e8f1fc; color: var(--brand); border-radius: 12px; }
+.brand-icon { width: 58px; height: 58px; }
+.auth-card { border: 1px solid var(--soft-border); border-radius: 12px; box-shadow: 0 12px 32px rgba(36, 56, 84, .05); }
+.auth-card .card-body { padding: 32px; }
+.auth-card .form-control { min-height: 44px; }
+.auth-card .btn { min-height: 44px; font-weight: 600; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: row; }
+.app-sidebar { position: sticky; top: 0; width: 250px; height: 100vh; flex: 0 0 250px; border-right: 1px solid var(--soft-border); background: #fff; padding: 0; }
+.app-sidebar .container-fluid { padding: 0 15px; }
+.sidebar-top { min-height: 84px; border-bottom: 1px solid var(--soft-border); }
+.brand-link { display: flex; align-items: center; gap: 10px; font-size: 18px; text-decoration: none; color: #253449; font-weight: 600; letter-spacing: -.03em; }
+.brand-link:hover { color: #253449; }
+.brand-link strong { font-weight: 700; color: var(--brand); }
+.sidebar-logo { width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0; }
+.app-nav { display: flex !important; flex-direction: column; align-items: stretch; padding-top: 25px; flex: 1; }
+.nav-label { padding: 0 12px 12px; font-size: 10px; letter-spacing: .12em; font-weight: 700; color: #8b97a8; }
+.app-sidebar .navbar-nav { display: block; width: 100%; }
+.app-sidebar .nav-item { margin-bottom: 4px; }
+.app-sidebar .nav-link { display: flex; align-items: center; gap: 12px; border-radius: 8px; padding: 12px; color: #516073; }
+.app-sidebar .nav-link:hover { background: #f4f7fb; color: var(--brand); }
+.app-sidebar .nav-link.active { background: #e9f2fd; color: var(--brand); font-weight: 600; }
+.app-sidebar .nav-link-icon { width: 22px; height: 22px; display: inline-flex; }
+.sidebar-bottom { width: 100%; border-top: 1px solid var(--soft-border); padding: 20px 4px 24px; }
+.app-main { min-width: 0; flex: 1; background: #f7f9fc; }
+.app-header { background: #fff; padding: 32px 0 26px; border-bottom: 1px solid var(--soft-border); }
+.app-header h1 { margin: 4px 0 0; font-size: 27px; font-weight: 700; letter-spacing: -.035em; }
+.page-body { padding-top: 34px; }
+.welcome-card { border-radius: 12px; border: 1px solid var(--soft-border); box-shadow: 0 4px 18px rgba(36,56,84,.025); }
+.welcome-card .card-body { padding: 32px; }
+@media (max-width: 991.98px) {
+    .app-shell { display: block; }
+    .app-sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--soft-border); }
+    .sidebar-top { min-height: 66px; }
+    .app-nav { display: none !important; padding-top: 16px; }
+    .app-nav.show { display: flex !important; }
+    .sidebar-bottom { margin-top: 18px !important; }
+    .app-header { padding: 24px 0; }
+    .page-body { padding-top: 20px; }
+}
